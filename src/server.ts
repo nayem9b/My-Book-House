@@ -8,7 +8,7 @@ async function dbConnect() {
     // await mongoose.connect(
     //   `mongodb+srv://${process.env.DB_USER}:${process.env.DB_PASSWORD}@cluster0.dafmrk2.mongodb.net/MongooseAssignment`
     // );
-    await mongoose.connect(`mongodb://127.0.0.1:27017/BooksDatabase`);
+    await mongoose.connect("mongodb://127.0.0.1:27017/BooksDatabase");
     console.log(
       `Database connection successful, ${process.env.DB_USER} , ${process.env.DB_PASSWORD}`
     );

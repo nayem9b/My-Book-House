@@ -18,14 +18,6 @@ const bookSchema = new Schema<IBooks>({
     type: Number,
     required: true,
   },
-  rating: {
-    type: Number,
-    required: true,
-  },
-  price: {
-    type: Schema.Types.Mixed,
-    required: true,
-  },
   publisher: {
     name: {
       type: String,
@@ -51,19 +43,24 @@ const bookSchema = new Schema<IBooks>({
     ],
     required: true,
   },
+  rating: {
+    type: Number,
+    required: true,
+  },
+  price: {
+    type: Schema.Types.Mixed,
+    required: true,
+  },
 });
 
 const Books = model<IBooks>("Books", bookSchema);
 export default Books;
 
-//     title: string;
+//  title: string;
 //   author: string[];
 //   genre: string;
 //   publicationYear: number;
+//   publisher: { name: string; location: string };
+//   reviews: [{ user: string; comment: string }];
 //   rating: number;
 //   price: string | number;
-//   publisher: { name: string; location: string };
-//   reviews: [
-//     { user: string; comment: string },
-//     { user: string; comment: string }
-//   ];

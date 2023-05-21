@@ -6,6 +6,7 @@ export const getAllBooks = async (
   res: Response,
   next: NextFunction
 ) => {
-  const books = await getBooksFromDB();
-  res.status(200).json({ status: " success", data: books });
+  const Books = await getBooksFromDB();
+  // res.status(200).json({ status: " success", data: Books });
+  res.send(Books);
 };
