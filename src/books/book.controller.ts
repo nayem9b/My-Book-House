@@ -6,7 +6,7 @@ import {
   getFeaturedBooksFromDB,
   getScifiBooksFromDB,
   updatePriceToIntFromDB,
-} from "./user.services";
+} from "./book.services";
 
 // Task:1
 export const getAllBooks = async (
@@ -65,6 +65,7 @@ export const confirmation = async (
 ) => {
   res.send("My App is working");
 };
+
 export const createBooks = async (
   req: Request,
   res: Response,

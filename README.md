@@ -1,6 +1,12 @@
 # Readme
 
-## All routes are defined in the user.route.ts file
+## All routes are defined in the 'user.route.ts' file
+
+## Database is named 'MongooseAssignment' and Database collection is named 'Books'
+
+## App is running on MongoDB Atlas
+
+## Interface is tested by '/create-data' route
 
 # Questions
 

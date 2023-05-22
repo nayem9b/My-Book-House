@@ -7,13 +7,9 @@ import {
   getFeaturedBooks,
   getScifiBooks,
   updateBooksPriceToInt,
-} from "./user.controller";
+} from "./book.controller";
 
 const router = express.Router();
-// Interface Confirmation test
-router.post("/create-data", createBooks);
-
-router.get("/", confirmation);
 
 // task:1
 router.get("/allbooks", getAllBooks);
@@ -30,5 +26,10 @@ router.get("/featured", getFeaturedBooks);
 // task:5
 router.patch("/updatePrice", updateBooksPriceToInt);
 router.post("/updatePrice", updateBooksPriceToInt);
+
+// Interface Confirmation test
+router.post("/create-data", createBooks);
+
+router.get("/", confirmation);
 
 export default router;

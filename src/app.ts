@@ -3,7 +3,7 @@ import cors from "cors";
 
 const app: Application = express();
 
-import routes from "./user/user.route";
+import routes from "./books/book.route";
 
 // Middlewares
 app.use(cors());

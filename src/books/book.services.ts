@@ -58,7 +58,7 @@ export const getFeaturedBooksFromDB = async (): Promise<IBooks[]> => {
     },
 
     { $sort: { rating: -1 } },
-    { $project: { title: 1, rating: 1, featured: 1 } },
+    { $project: { reviews: 0, publisher: 0, author: 0 } },
   ]);
 
   return featuredBooks;
