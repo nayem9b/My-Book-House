@@ -1,4 +1,11 @@
-#Question 1: What is the purpose of creating a model with an interface and schema in MongoDB? How does it help in defining the structure of a collection?
+# Readme
+
+## All routes are defined in the user.route.ts file
+
+# Questions
+
+### Question 1: What is the purpose of creating a model with an interface and schema in MongoDB? How does it help in defining the structure of a collection?
+
 Answer:
 
 Question 2: Explain the concept of field filtering in MongoDB. How can you specify which fields to include or exclude in the returned documents?

@@ -28,21 +28,18 @@ const bookSchema = new Schema<IBooks>({
       required: true,
     },
   },
-  reviews: {
-    type: [
-      {
-        user: {
-          type: String,
-          required: true,
-        },
-        comment: {
-          type: String,
-          required: true,
-        },
+  reviews: [
+    {
+      user: {
+        type: String,
+        required: true,
       },
-    ],
-    required: true,
-  },
+      comment: {
+        type: String,
+        required: true,
+      },
+    },
+  ],
   rating: {
     type: Number,
     required: true,
@@ -53,5 +50,5 @@ const bookSchema = new Schema<IBooks>({
   },
 });
 
-const Books = model<IBooks>("Books", bookSchema);
+const Books = model<IBooks>("", bookSchema, "Books");
 export default Books;
