@@ -19,6 +19,15 @@ We can use $project to filter field from various fields. Likewise if we want to 
 
 ### Question 3: What are instance methods in MongoDB models? Provide an example of a custom instance method and explain its purpose.
 
+Answer:
+In MongoDB models, instance methods are methods defined on individual model instances or documents. They are specific to each instance of the model and allow you to define custom behaviors or actions that can be performed on a single document.
+
+userSchema.methods.getFullName = function() {
+return this.firstName + ' ' + this.lastName;
+};
+
+Here, it is a custom instance method
+
 ### Question 4: How do you use comparison operators like "$ne," "$gt," "$lt," "$gte," and "$lte" in MongoDB queries? Provide examples to illustrate their usage.
 
 Answer: $ne represents not equal. It returns the values which are not equal to the provided values \n
