@@ -7,15 +7,17 @@ import {
   updatePriceToIntFromDB,
 } from "./user.services";
 
+// Task:1
 export const getAllBooks = async (
   req: Request,
   res: Response,
   next: NextFunction
 ) => {
   const Books = await getBooksFromDB();
-  // res.status(200).json({ status: " success", data: Books });
   res.send(Books);
 };
+
+// Task:2
 export const getFantasyBooks = async (
   req: Request,
   res: Response,

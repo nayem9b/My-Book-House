@@ -55,12 +55,3 @@ const bookSchema = new Schema<IBooks>({
 
 const Books = model<IBooks>("Books", bookSchema);
 export default Books;
-
-//  title: string;
-//   author: string[];
-//   genre: string;
-//   publicationYear: number;
-//   publisher: { name: string; location: string };
-//   reviews: [{ user: string; comment: string }];
-//   rating: number;
-//   price: string | number;

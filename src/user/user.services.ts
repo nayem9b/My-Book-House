@@ -2,11 +2,13 @@ import mongoose from "mongoose";
 import { IBooks } from "./book.interface";
 import Books from "./book.model";
 
+//! Task:1
 export const getBooksFromDB = async (): Promise<IBooks[]> => {
   const Userbooks = await Books.find({});
   return Userbooks;
 };
 
+//! Task:2
 export const getFantasyBooksFromDB = async (): Promise<IBooks[]> => {
   const Userbooks = await Books.find({ genre: "Fantasy" });
   return Userbooks;
