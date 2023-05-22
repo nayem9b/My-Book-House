@@ -2,6 +2,7 @@ import { NextFunction, Request, Response } from "express";
 import {
   getBooksFromDB,
   getFantasyBooksFromDB,
+  getFeaturedBooksFromDB,
   getScifiBooksFromDB,
   updatePriceToIntFromDB,
 } from "./user.services";
@@ -31,6 +32,16 @@ export const getScifiBooks = async (
   next: NextFunction
 ) => {
   const Books = await getScifiBooksFromDB();
+  res.send(Books);
+};
+
+// ! Task 4: Add a field named Featured where, books rating greater than 4.5 would be featured as "Best Seller" and rating greater than 4.0 would be featured as "popular"
+export const getFeaturedBooks = async (
+  req: Request,
+  res: Response,
+  next: NextFunction
+) => {
+  const Books = await getFeaturedBooksFromDB();
   res.send(Books);
 };
 
