@@ -48,7 +48,7 @@ $lte represents less than equal. It returns the values which are less than or eq
 
 #### Example: {$lte:{age:40}} // Returns other peoples where age is less than or equal to 40
 
-# Question 5: What are MongoDB’s “$in” and “$nin” operators? How can you use them to match values against an array of values or exclude values from a given array?
+#### Question 5: What are MongoDB’s “$in” and “$nin” operators? How can you use them to match values against an array of values or exclude values from a given array?
 
 Answer: The "$in" operator allows you to match values against an array of values. It checks if a specified field matches any of the values in the provided array. If a match is found, the document is returned in the query result. On the other hand,
 

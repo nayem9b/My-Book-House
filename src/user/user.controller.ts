@@ -1,6 +1,6 @@
 import { NextFunction, Request, Response } from "express";
 import {
-  // createBooksDataToDB,
+  createBooksDataToDB,
   getBooksFromDB,
   getFantasyBooksFromDB,
   getFeaturedBooksFromDB,
@@ -65,16 +65,16 @@ export const confirmation = async (
 ) => {
   res.send("My App is working");
 };
-// export const createBooks = async (
-//   req: Request,
-//   res: Response,
-//   next: NextFunction
-// ) => {
-//   const data = req.body;
-//   const user = await createBooksDataToDB();
+export const createBooks = async (
+  req: Request,
+  res: Response,
+  next: NextFunction
+) => {
+  const data = req.body;
+  const user = await createBooksDataToDB(data);
 
-//   res.status(200).json({
-//     status: "success",
-//     data: user,
-//   });
-// };
+  res.status(200).json({
+    status: "success",
+    data: user,
+  });
+};

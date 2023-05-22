@@ -1,7 +1,7 @@
 import express from "express";
 import {
   confirmation,
-  //   createBooks,
+  createBooks,
   getAllBooks,
   getFantasyBooks,
   getFeaturedBooks,
@@ -10,6 +10,8 @@ import {
 } from "./user.controller";
 
 const router = express.Router();
+// Interface Confirmation test
+router.post("/create-data", createBooks);
 
 router.get("/", confirmation);
 
@@ -29,6 +31,4 @@ router.get("/featured", getFeaturedBooks);
 router.patch("/updatePrice", updateBooksPriceToInt);
 router.post("/updatePrice", updateBooksPriceToInt);
 
-// Test
-// router.get("/create-data", createBooks);
 export default router;
