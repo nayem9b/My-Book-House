@@ -2,6 +2,8 @@
 
 ## All routes are defined in the 'user.route.ts' file
 
+## APP uses 'api' as serverside route
+
 ## Database is named 'MongooseAssignment' and Database collection is named 'Books'
 
 ## App is running on MongoDB Atlas

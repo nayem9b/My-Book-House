@@ -5,6 +5,7 @@ import {
   getAllBooks,
   getFantasyBooks,
   getFeaturedBooks,
+  getGenreBooks,
   getScifiBooks,
   updateBooksPriceToInt,
 } from "./book.controller";
@@ -16,6 +17,7 @@ router.get("/allbooks", getAllBooks);
 
 // task:2
 router.get("/fantasy", getFantasyBooks);
+router.get("/allbooks/:id", getGenreBooks);
 
 // task:3
 router.get("/scifi", getScifiBooks);

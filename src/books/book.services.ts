@@ -17,6 +17,13 @@ export const getBooksFromDB = async (): Promise<IBooks[]> => {
   return Allbooks;
 };
 
+export const getGenreBooksFromDB = async (payload: string) => {
+  const Fantasybooks = await Books.find({
+    genre: { $regex: new RegExp("^" + payload, "i") },
+  });
+  return Fantasybooks;
+};
+
 //! Task:2
 export const getFantasyBooksFromDB = async (): Promise<IBooks[]> => {
   const Fantasybooks = await Books.find({ genre: "Fantasy" });

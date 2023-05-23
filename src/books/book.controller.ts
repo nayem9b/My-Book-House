@@ -4,6 +4,7 @@ import {
   getBooksFromDB,
   getFantasyBooksFromDB,
   getFeaturedBooksFromDB,
+  getGenreBooksFromDB,
   getScifiBooksFromDB,
   updatePriceToIntFromDB,
 } from "./book.services";
@@ -77,5 +78,18 @@ export const createBooks = async (
   res.status(200).json({
     status: "success",
     data: user,
+  });
+};
+
+export const getGenreBooks = async (
+  req: Request,
+  res: Response,
+  next: NextFunction
+) => {
+  const { id } = req.params;
+  const GenreBooks = await getGenreBooksFromDB(id);
+  res.status(200).json({
+    status: "success",
+    data: GenreBooks,
   });
 };
